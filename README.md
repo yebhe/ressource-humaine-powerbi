@@ -123,8 +123,6 @@ Power Query : une requête par dimension (colonne sélectionnée, doublons suppr
 
 Modèle en étoile, mode Import, culture fr-FR : **1 fait**, **8 dimensions**, **10 relations** plusieurs-à-un (filtrage unidirectionnel), dont 2 inactives vers `dim_date`.
 
-Le modèle chargé contient en plus une 11e relation (`dim_employee[DOB]` vers une table de dates automatique) et 2 tables de dates masquées, créées par *Auto date/time*. Elles ne servent à aucun calcul (voir [Pistes d'amélioration](#-pistes-damélioration)).
-
 ![Modèle relationnel](docs/model_rationnel.png)
 
 ```mermaid
@@ -240,7 +238,6 @@ Contrôles réalisés en lecture seule par requêtes DAX sur le modèle chargé.
 - **Démissions.** La catégorie « Voluntarily Terminated » regroupe aussi retraite, service militaire et déménagement, ainsi que 2 cas dont le motif est « performance » (1) ou « attendance » (1), qui relèvent plutôt d'un départ subi.
 - **Ancienneté et âge.** L'ancienneté mélange actifs (mesurée à la date de référence) et partis (mesurée à leur départ). L'âge est calculé à une date fixe, quelle que soit la période sélectionnée.
 - **Performance moyenne.** `PerformanceScore` est une catégorie : la note de 1 à 4 repose sur une échelle choisie, avec le même écart entre chaque niveau.
-- **Axes de temps.** Les mesures de salaire, d'engagement et de performance utilisent l'étendue de la période sélectionnée : un axe `Month name` sans année donne une valeur plate. Il faut mettre `Year` en axe.
 - **Années sans départ.** `Nb departs` renvoie un vide plutôt que 0, d'où l'affichage « Pas de N-1 » sur les comparaisons.
 
 ---
@@ -251,9 +248,6 @@ Contrôles réalisés en lecture seule par requêtes DAX sur le modèle chargé.
 - Remplacer les libellés écrits en dur dans les mesures (« Voluntarily Terminated », « Employee Referral », « Diversity Job Fair ») par des indicateurs dans les dimensions.
 - Proratiser le taux de départ de la dernière année sur la période réellement couverte.
 - Séparer les départs évitables (démission pour un autre poste, salaire, insatisfaction) des départs non évitables (retraite, service militaire, déménagement).
-- Corriger les fautes de nommage (`Rercrutment`, `Peformance`) et les accents des mesures (`Nb departs`, `Demissions`), puis ajouter les descriptions manquantes et retirer la note de développement de la description de `Anciennete moyenne au depart`.
-- Désactiver Auto date/time et supprimer la relation sur `DOB`.
-- Renommer `1_dashbaord.png` en `1_dashboard.png` (et mettre à jour le lien ci-dessus).
 
 ---
 
