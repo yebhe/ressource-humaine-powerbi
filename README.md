@@ -12,8 +12,7 @@ Effectifs · Attrition · Recrutement · Rémunération · Démographie · Perfo
 
 <br>
 
-[![Télécharger le .pbix](https://img.shields.io/badge/T%C3%A9l%C3%A9charger%20le%20.pbix-0F7B84?style=for-the-badge&logo=powerbi&logoColor=white)](https://github.com/yebhe/ressource-humaine-powerbi
-/raw/main/rh_p4_last.pbix)
+[![Télécharger le .pbix](https://img.shields.io/badge/T%C3%A9l%C3%A9charger%20le%20.pbix-0F7B84?style=for-the-badge&logo=powerbi&logoColor=white)](https://github.com/yebhe/ressource-humaine-powerbi/raw/refs/heads/main/rh_p4_last.pbix)
 [![Données](https://img.shields.io/badge/Donn%C3%A9es-0F7B84?style=for-the-badge&logo=files&logoColor=white)](data/)
 [![Mesures DAX](https://img.shields.io/badge/Mesures%20DAX-0F7B84?style=for-the-badge&logo=readthedocs&logoColor=white)](measures/mesures_dax.md)
 [![Galerie](https://img.shields.io/badge/Galerie-0F7B84?style=for-the-badge&logo=googlephotos&logoColor=white)](docs/README.md)
