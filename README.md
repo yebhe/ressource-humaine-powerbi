@@ -254,7 +254,7 @@ Contrôles réalisés en lecture seule par requêtes DAX sur le modèle chargé.
 ## 📂 Structure du dépôt
 
 ```
-NOM_DU_DEPOT/
+ressource-humaine-powerbi/
 ├── README.md                  ← ce fichier
 ├── .gitignore
 ├── rh_p4_last.pbix            ← rapport Power BI
